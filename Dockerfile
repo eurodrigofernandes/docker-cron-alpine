@@ -5,6 +5,8 @@ RUN apk add curl
 RUN apk add run-parts
 
 COPY  ./entrypoint.sh /entrypoint.sh
+COPY  ./teste.txt /teste.txt
+
 RUN    \
       cp -rp /etc/crontabs /etc/crontabs.bkp && \
       chmod 755 /entrypoint.sh
